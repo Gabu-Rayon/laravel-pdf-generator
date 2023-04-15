@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class PdfController extends Controller
 {
-    //
+ public function generatePdf(){
+    return view();
+ }
 }
