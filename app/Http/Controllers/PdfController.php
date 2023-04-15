@@ -10,7 +10,7 @@ class PdfController extends Controller
  public function generatePdf(){     
     
     $pdf = App::make('dompdf.wrapper');
-    $pdf->loadHTML('<h1>Hello Wolrd Test</h1>');
+    $pdf->loadHTML('<h1>Hello World Test</h1>');
     return $pdf->stream();
  }
 }
