@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
   use Barryvdh\DomPDF\Facade\Pdf;
@@ -37,11 +38,21 @@ class PdfController extends Controller
   * Generate from a blade  which has been passed a variable
   *Second Method */
   
+//     public function generatePdf(){       
+//     $data ="Hae,My name is Gibson M Developer of this Repo !";
+//     $email = "gibsonmurimi4@gmail.com";
+//     $pdf = Pdf::loadView('index', ['data' =>$data,'email'=>$email]);
+//     return $pdf->download();
+//  }
+ /*****
+  * Generate from a blade  which has been passed a variable
+  *With a  Unique Name of Document */
+  
     public function generatePdf(){       
     $data ="Hae,My name is Gibson M Developer of this Repo !";
     $email = "gibsonmurimi4@gmail.com";
     $pdf = Pdf::loadView('index', ['data' =>$data,'email'=>$email]);
-    return $pdf->download();
+    return $pdf->download('my-file' .time(). rand('9999','99999'). Str::random('10').'.pdf');
  }
 
 }
