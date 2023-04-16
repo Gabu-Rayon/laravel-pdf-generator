@@ -14,8 +14,7 @@ class PdfController extends Controller
 //     return $pdf->stream();
 //  }
 
-  public function generatePdf(){     
-    
+  public function generatePdf(){       
    
     $pdf = Pdf::loadView('index');
     return $pdf->download();
