@@ -16,16 +16,31 @@ class PdfController extends Controller
 //  }
     
 /****Generate from a Blade */
+
 //   public function generatePdf(){       
    
 //     $pdf = Pdf::loadView('index');
 //     return $pdf->download();
 //  }
 
- /*****Generate from a blade  which has been passed a variable */
-  public function generatePdf(){       
-    $data ="Hiae,My name is Gibson M Developer of this Repo !";
-    $pdf = Pdf::loadView('index', compact('data'));
+ /*****
+  * Generate from a blade  which has been passed a variable
+  *First Method */
+  
+//   public function generatePdf(){       
+//     $data ="Hiae,My name is Gibson M Developer of this Repo !";
+//     $pdf = Pdf::loadView('index', compact('data'));
+//     return $pdf->download();
+//  }
+
+ /*****
+  * Generate from a blade  which has been passed a variable
+  *Second Method */
+  
+    public function generatePdf(){       
+    $data ="Hae,My name is Gibson M Developer of this Repo !";
+    $email = "gibsonmurimi4@gmail.com";
+    $pdf = Pdf::loadView('index', ['data' =>$data,'email'=>$email]);
     return $pdf->download();
  }
 

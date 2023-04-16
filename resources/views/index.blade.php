@@ -123,10 +123,23 @@
                     <tr>
                         <td bgcolor="#ffffff" align="center" valign="top"
                             style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; line-height: 48px;">
-                            <h1 style="font-size: 48px; font-weight: 400; margin: 2;">Welcome to Gibson Developer DomPdf
-                                Repo!</h1>
-
-                                {{$data}}
+                            <h5 style="font-size: 48px; font-weight: 400; margin: 2;">Welcome to Gibson Developer DomPdf
+                                Repo!
+                            </h5>
+                            <br><br>
+                            <p>
+                                <small>
+                                    <i>
+                                        {{ $data }}
+                                    </i>
+                                </small>
+                            </p>
+                            <br> <br>
+                            <p>
+                                <small>
+                                    Reach me {{ $email }}
+                                </small>
+                            </p>
 
                             {{-- <img src="https://firebasestorage.googleapis.com/v0/b/mewzik-c3c20.appspot.com/o/staticHtml%2Fsound.png?alt=media&token=e4ffc196-72e0-46be-93bc-a08f45599978"
                                 width="125" height="120"
